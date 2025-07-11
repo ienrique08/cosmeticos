@@ -22,17 +22,17 @@ export class HomeComponent {
 
 productos = [
    {
-    img: 'assets/images/labial.jpg',
+    img: 'assets/images/labiaaal.jpg',
     nombre: 'Labial Mate',
     descripcion: 'Colores intensos y larga duración para labios irresistibles.'
   },
   {
-    img: 'assets/images/base.jpg',
+    img: 'assets/images/baseaa.jpg',
     nombre: 'Máscara de Pestañas',
     descripcion: 'Volumen espectacular y definición sin grumos.'
   },
   {
-    img: 'assets/images/Paletas.jpg',
+    img: 'assets/images/Paletaaas.jpg',
     nombre: 'Base de Maquillaje',
     descripcion: 'Cobertura uniforme con acabado natural y duradero.'
   }
