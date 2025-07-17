@@ -1,22 +1,91 @@
 <h1>Carrito de Compras</h1>
-<table *ngIf="carrito.obtenerItems().length > 0">
-  <thead>
-    <tr>
-      <th>Producto</th>
-      <th>Cantidad</th>
-      <th>Precio unitario</th>
-      <th>Subtotal</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of carrito.obtenerItems()">
-      <td>{{ item.producto.nombre }}</td>
-      <td>{{ item.cantidad }}</td>
-      <td>${{ item.producto.precio }}</td>
-      <td>${{ item.producto.precio * item.cantidad }}</td>
-    </tr>
-  </tbody>
-</table>
-<p *ngIf="carrito.obtenerItems().length === 0">El carrito está vacío.</p>
-<h2 *ngIf="carrito.obtenerItems().length > 0">Total: ${{ carrito.obtenerTotal() }}</h2>
-<button *ngIf="carrito.obtenerItems().length > 0" (click)="carrito.limpiar()">Vaciar carrito</button>
+
+<div class="carrito-container" *ngIf="carrito.obtenerItems().length > 0; else vacio">
+  <table class="carrito-tabla">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio unitario</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of carrito.obtenerItems()">
+        <td>{{ item.producto.nombre }}</td>
+        <td>{{ item.cantidad }}</td>
+        <td>${{ item.producto.precio }}</td>
+        <td>${{ item.producto.precio * item.cantidad }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="carrito-total">
+    <strong>Total: ${{ carrito.obtenerTotal() }}</strong>
+  </div>
+
+  <form class="pago-form" (ngSubmit)="confirmarCompra()" *ngIf="!compraConfirmada">
+  <h3>Selecciona forma de pago</h3>
+  <label>
+    <input type="radio" name="pago" [(ngModel)]="formaPago" value="Tarjeta" required>
+    Tarjeta de crédito/débito
+  </label>
+  <label>
+    <input type="radio" name="pago" [(ngModel)]="formaPago" value="Transferencia">
+    Transferencia bancaria
+  </label>
+  <label>
+    <input type="radio" name="pago" [(ngModel)]="formaPago" value="Efectivo">
+    Pago en efectivo
+  </label>
+
+  <!-- Formulario para tarjeta -->
+  <div *ngIf="formaPago === 'Tarjeta'" class="pago-detalle">
+    <label>
+      Número de tarjeta
+      <input type="text" [(ngModel)]="tarjeta.numero" name="numeroTarjeta" maxlength="16" required>
+    </label>
+    <label>
+      Nombre en la tarjeta
+      <input type="text" [(ngModel)]="tarjeta.nombre" name="nombreTarjeta" required>
+    </label>
+    <label>
+      Fecha de expiración
+      <input type="text" [(ngModel)]="tarjeta.expiracion" name="expiracionTarjeta" placeholder="MM/AA" maxlength="5" required>
+    </label>
+    <label>
+      CVV
+      <input type="text" [(ngModel)]="tarjeta.cvv" name="cvvTarjeta" maxlength="4" required>
+    </label>
+  </div>
+
+  <!-- Formulario para transferencia -->
+  <div *ngIf="formaPago === 'Transferencia'" class="pago-detalle">
+    <label>
+      Banco de origen
+      <input type="text" [(ngModel)]="transferencia.banco" name="bancoTransferencia" required>
+    </label>
+    <label>
+      Número de cuenta
+      <input type="text" [(ngModel)]="transferencia.cuenta" name="cuentaTransferencia" required>
+    </label>
+    <label>
+      Titular de la cuenta
+      <input type="text" [(ngModel)]="transferencia.titular" name="titularTransferencia" required>
+    </label>
+  </div>
+
+  <button class="btn-comprar" type="submit">Confirmar compra</button>
+</form>
+
+  <div class="compra-exitosa" *ngIf="compraConfirmada">
+    <h3>¡Compra realizada con éxito!</h3>
+    <p>Gracias por tu compra. Pronto recibirás un correo con los detalles.</p>
+    <button class="btn-comprar" (click)="finalizar()">Finalizar</button>
+  </div>
+
+  <button class="btn-vaciar" (click)="carrito.limpiar()" *ngIf="!compraConfirmada">Vaciar carrito</button>
+</div>
+
+<ng-template #vacio>
+  <p>El carrito está vacío.</p>
+</ng-template>

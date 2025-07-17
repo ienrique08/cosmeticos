@@ -52,7 +52,7 @@ body, html {
 }
 
 .hero {
-  /*background: url('../../../../src/assets/images/cosmeticos.jpg') center/cover no-repeat;*/
+  background: url('../../../../src/assets/images/cosmeticos.jpg') center/cover no-repeat;
   height: 150vh;
   position: relative;
   color: white;
