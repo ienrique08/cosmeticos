@@ -4,3 +4,25 @@ body {
   background-color: #fafafa;
   font-family: 'Roboto', sans-serif;
 }
+@media (max-width: 700px) {
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+  .navbar, .container, .menu {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+  }
+  .menu a, .menu button {
+    width: 100%;
+    text-align: left;
+    margin: 0.5rem 0;
+  }
+  .hero-content h1 {
+    font-size: 1.3rem;
+  }
+  .producto img {
+    max-width: 100%;
+    height: auto;
+  }
+}
