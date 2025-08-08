@@ -65,6 +65,27 @@ productos = [
     img: 'assets/images/lapiz.jpg',
     nombre: 'Lápiz de cejas',
     descripcion: 'Define y da forma a tus cejas con precisión y naturalidad.'
+  },
+  {
+    img: 'assets/images/iluminador.jpg',
+    nombre: 'Iluminador',
+    descripcion: 'Aporta un brillo radiante a tu rostro con este iluminador.'
+  },
+  {
+    img: 'assets/images/desmaqui.jpg',
+    nombre: 'Desmaquillante',
+    descripcion: 'Elimina el maquillaje de forma suave y efectiva.'
+  },
+  {
+    img: 'assets/images/crema.jpg',
+    nombre: 'Crema Hidratante',
+    descripcion: 'Mantén tu piel suave e hidratada con esta crema.'
+  },
+
+  {
+    img: 'assets/images/mascarilla.jpg',
+    nombre: 'Mascarilla Facial',
+    descripcion: 'Hidrata y rejuvenece tu piel con esta mascarilla.'
   }
 ];
 pagina = 1;
