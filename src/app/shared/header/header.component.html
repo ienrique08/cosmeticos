@@ -8,7 +8,7 @@
       <a routerLink="/">Inicio</a>
   <a routerLink="/quienes-somos">Quiénes Somos</a>
   <a routerLink="/productos">Productos</a>
-  <a routerLink="/contacto">Contacto</a>
+
 <a *ngIf="auth.estaAutenticado()" routerLink="/admin/agregar-producto">Agregar Producto</a>
 <a *ngIf="auth.estaAutenticado()" (click)="logout()">Cerrar sesión</a>
  <a routerLink="/carrito">
@@ -18,9 +18,9 @@
 <!--  <a *ngIf="!auth.estaAutenticado()" routerLink="/login">Admin</a>
  -->
     </nav>
-    <div class="extras">
-      <button class="donate">Contacto</button>
-    </div>
+  <div class="extras">
+  <a routerLink="/contacto" class="donate">Contacto</a>
+</div>
   </div>
 </header>
 
