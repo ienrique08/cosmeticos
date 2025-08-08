@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://vella-vita.netlify.app/</loc>
+    <lastmod>2025-08-08</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://vella-vita.netlify.app/quienes-somos</loc>
+    <lastmod>2025-08-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://vella-vita.netlify.app/contacto</loc>
+    <lastmod>2025-08-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://vella-vita.netlify.app/productos</loc>
+    <lastmod>2025-08-08</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://vella-vita.netlify.app/login</loc>
+    <lastmod>2025-08-08</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://vella-vita.netlify.app/carrito</loc>
+    <lastmod>2025-08-08</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://vella-vita.netlify.app/register</loc>
+    <lastmod>2025-08-08</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+</urlset>
