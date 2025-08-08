@@ -79,7 +79,7 @@ productos = [
   {
     img: 'assets/images/crema.jpg',
     nombre: 'Crema Hidratante',
-    descripcion: 'Mantén tu piel suave e hidratada con esta crema.'
+    descripcion: 'Mantén tu piel suave e hidratada con esta crema !'
   },
 
   {
