@@ -7,7 +7,7 @@ import { Producto } from '../models/producto.model';
   providedIn: 'root'
 })
 export class ProductosService {
-  private apiUrl = 'http://localhost:3000/api/productos';
+  private apiUrl = 'https://vellabackend.onrender.com/api/productos';
 
   constructor(private http: HttpClient) {}
 
@@ -19,7 +19,7 @@ export class ProductosService {
     return this.http.post(this.apiUrl, producto);
   }
   eliminarProducto(id: number): Observable<any> {
-    return this.http.delete(`http://localhost:3000/api/productos/${id}`);
+    return this.http.delete(`https://vellabackend.onrender.com/api/productos/${id}`);
   }
 
 
