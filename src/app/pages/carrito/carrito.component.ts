@@ -51,7 +51,7 @@ export class CarritoComponent {
     };
 
     // Envía la compra al backend
-    this.http.post('http://localhost:3000/api/compras', compra).subscribe({
+    this.http.post('https://vellabackend.onrender.com/api/compras', compra).subscribe({
       next: () => {
         this.compraConfirmada = true;
       },
