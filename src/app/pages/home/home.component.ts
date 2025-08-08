@@ -74,7 +74,7 @@ productos = [
   {
     img: 'assets/images/desmaqui.jpg',
     nombre: 'Desmaquillante',
-    descripcion: 'Elimina el maquillaje de forma suave y efectiva.'
+    descripcion: 'Elimina el maquillaje de forma suave y efectiva !'
   },
   {
     img: 'assets/images/crema.jpg',
