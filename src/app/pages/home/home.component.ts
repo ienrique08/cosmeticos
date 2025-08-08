@@ -35,6 +35,36 @@ productos = [
     img: 'assets/images/Paletas.jpg',
     nombre: 'Base de Maquillaje',
     descripcion: 'Cobertura uniforme con acabado natural y duradero.'
+  },
+  {
+    img: 'assets/images/mascara.jpg',
+    nombre: 'Mascara de Pestañas',
+    descripcion: 'Resalta tus ojos con volumen y longitud excepcionales.'
+  },
+  {
+    img: 'assets/images/corrector.jpg',
+    nombre: 'Corrector de Maquillaje',
+    descripcion: 'Cubre imperfecciones y ojeras con facilidad.'
+  },
+  {
+    img: 'assets/images/brochas.jpg',
+    nombre: 'Set de Brochas',
+    descripcion: 'Juego completo de brochas para un maquillaje profesional.'
+  },
+  {
+    img: 'assets/images/fijador.jpg',
+    nombre: 'Fijador de Maquillaje',
+    descripcion: 'Mantén tu maquillaje intacto todo el día con este fijador.'
+  },
+  {
+    img: 'assets/images/delineador.jpg',
+    nombre: 'Delineador de Ojos',
+    descripcion: 'Traza líneas precisas y duraderas para un look impactante.'
+  },
+  {
+    img: 'assets/images/lapiz.jpg',
+    nombre: 'Lápiz de cejas',
+    descripcion: 'Define y da forma a tus cejas con precisión y naturalidad.'
   }
 ];
 pagina = 1;

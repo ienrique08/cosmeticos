@@ -1,18 +1,20 @@
+<!-- HERO SECTION -->
 <section class="hero">
   <div class="overlay">
     <div class="hero-content">
       <h1>Bienvenido a <strong>VELLA VITA</strong></h1>
       <p>Descubre la mejor selección de cosméticos para realzar tu belleza natural.</p>
       <div class="buttons">
-        <a routerLink="/productos" class="btn yellow">Ver Productos</a>
+        <!-- Scroll interno con ancla -->
+        <a href="#destacados" class="btn yellow">Ver Productos</a>
         <a routerLink="/contacto" class="btn white">Contáctanos</a>
       </div>
     </div>
   </div>
 </section>
 
-
-<section class="destacados-grid">
+<!-- PRODUCTOS DESTACADOS SECTION -->
+<section class="destacados-grid" id="destacados">
   <h2 class="titulo">Productos Destacados</h2>
   <div class="productos-grid">
     <div class="producto" *ngFor="let prod of productosPaginaActual">
